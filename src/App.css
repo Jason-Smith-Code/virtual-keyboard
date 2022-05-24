@@ -9,199 +9,244 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--main-background);
-  color: var(--main-color);
+@media (min-width: 0px) {
+
+  body {
+    background-color: var(--main-background);
+    color: var(--main-color);
+  }
+  
+  button {
+    color: var(--main-color);
+    background-color: var(--main-background);
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    border-radius:5px;
+  }
+  
+  .icon {
+    color:  var(--main-color);
+  }
+
+  textarea {
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 20px;
+    resize: none;
+  }
+  
+  #Mobile-keyboard-letters, #Mobile-keyboard-numbers {
+    width: 100vw;
+    padding: 10px;
+    display: grid;
+    gap: 3px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns:  repeat(10, 1fr);
+  }
+  
+  #Q, #One, #W, #Two, #E, #Three, #R, #Four, #T, #Five, #Y, #Six, #U, #Seven, #I, #Eight, #O, #Nine, #P, #Zero  {
+    grid-row: 1;
+  }
+  
+  #A, #At, #S, #Hash, #D, #Dollar, #F, #Percent, #G, #Ampersand, #H, #Star, #J, #Minus, #K, #Plus, #L, #Left-bracket, #Right-bracket {
+    grid-row: 2;
+  }
+  
+  #Capital, #Alt, #Z, #Exclamation, #X, #Double-quote, #C, #Single-quote, #V, #Colon, #B, #Semi-colon, #N, #Forward-slash, #M, #Question, #Delete-keyboard, #Delete-number  {
+    grid-column: 1 / span 1;
+  }
+  
+  #Dot, #Space-number, #Space-keyboard, #Numbers-link, #Comma {
+    grid-row: 4;
+  }
+  
+  #Q, #One {
+    grid-column: 1 / span 1;
+  }
+  
+  #W, #Two {
+    grid-column: 2 / span 1;
+  }
+  
+  #E, #Three {
+    grid-column: 3 / span 1;
+  }
+  
+  #R, #Four {
+    grid-column: 4 / span 1;
+  }
+  
+  #T, #Five {
+    grid-column: 5 / span 1;
+  }
+  
+  #Y, #Six {
+    grid-column: 6 / span 1;
+  }
+  
+  #U, #Seven {
+    grid-column: 7 / span 1;
+  }
+  
+  #I, #Eight {
+    grid-column: 8 / span 1;
+  }
+  
+  #O, #Nine {
+    grid-column: 9 / span 1;
+  }
+  
+  #P, #Zero {
+    grid-column: 10 / span 1;
+  }
+  
+  #A, #At {
+    grid-column: 1 / span 1;
+  }
+  
+  #S, #Hash {
+    grid-column: 2 / span 1;
+  }
+  
+  #D, #Dollar {
+    grid-column: 3 / span 1;
+  }
+  
+  #F, #Percent {
+    grid-column: 4 / span 1;
+  }
+  
+  #G, #Ampersand {
+    grid-column: 5 / span 1;
+  }
+  
+  #H, #Star {
+    grid-column: 6 / span 1;
+  }
+  
+  #J, #Minus {
+    grid-column: 7 / span 1;
+  }
+  
+  #K, #Plus {
+    grid-column: 8 / span 1;
+  }
+  
+  #L, #Left-bracket {
+    grid-column: 9 / span 1;
+  }
+  
+  #Right-bracket {
+    grid-column: 10 / span 1;
+  }
+  
+  #Capital, #Alt {
+    grid-row: 3;
+  }
+  
+  #Z, #Exclamation {
+    grid-column: 2 / span 1;
+  }
+  
+  #X, #Double-quote {
+    grid-column: 3 / span 1;
+  }
+  
+  #C, #Single-quote {
+    grid-column: 4 / span 1;
+  }
+  
+  #V, #Colon {
+    grid-column: 5 / span 1;
+  }
+  
+  #B, #Semi-colon {
+    grid-column: 6 / span 1;
+  }
+  
+  #N, #Forward-slash {
+    grid-column: 7 / span 1;
+  }
+  
+  #M, #Question {
+    grid-column: 8 / span 1;
+  }
+  
+  #Delete-keyboard, #Delete-number {
+    grid-column: 9 / span 2;
+  }
+  
+  #Numbers-link, #Comma {
+    grid-column: 1 / span 1;
+  }
+  
+  #Space-keyboard {
+    grid-column: 2 / span 9;
+  }
+  
+  #Space-number {
+    grid-column: 2 / span 8;
+  }
+  
+  #Dot {
+    grid-column: 10 / span 1;
+  }
+
+  #Desktop-keyboard {
+    display:none;
+  }
 }
 
-button {
-  color: var(--main-color);
-  background-color: var(--main-background);
-  border: 1px solid var(--main-color);
-  padding: 5px;
-  border-radius:5px;
-}
+@media (min-width: 768px) {
+  #Mobile-keyboard-numbers, #Mobile-keyboard-letters {
+    display: none;
+  }
 
-.icon {
-  color:  var(--main-color);
-}
+  #Desktop-keyboard {
+    display:block;
+    width: 100vw;
+    padding: 10px;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns:  repeat(13, 1fr);
+  }
 
-textarea {
-  width: 100%;
-  padding: 20px;
-}
+  #Desktop-One, #Desktop-Two, #Desktop-Three, #Desktop-Four, #Desktop-Five, #Desktop-Six, #Desktop-Seven, #Desktop-Eight, #Desktop-Nine, #Desktop-Zero, #Desktop-Minus, #Desktop-Plus, #Desktop-Delete {
+    grid-row: 1;
+  }
 
-#keyboard-letters, #keyboard-numbers {
-  width: 100vw;
-  padding: 10px;
-  display: grid;
-  gap: 3px;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns:  repeat(10, 1fr);
-}
+  #Desktop-Q, #Desktop-W, #Desktop-E, #Desktop-R, #Desktop-T, #Desktop-Y, #Desktop-U, #Desktop-I, #Desktop-O, #Desktop-P {
+    grid-row: 2;
+  }
 
+  #Desktop-A, #Desktop-S, #Desktop-D, #Desktop-F, #Desktop-G, #Desktop-H, #Desktop-J, #Desktop-K, #Desktop-L, #Desktop-Semi-colon, #Desktop-Hash, #Desktop-Single-quote{
+    grid-row:3;
+  }
 
-#Q, #One {
-  grid-column: 1 / span 1;
-  grid-row: 1;
-}
+  #Desktop-Z, #Desktop-X, #Desktop-C, #Desktop-V, #Desktop-B, #Desktop-N, #Desktop-M, #Desktop-Comma, #Desktop-Dot, #Desktop-Back-slash {
+    grid-row: 4;
+  }
 
-#W, #Two {
-  grid-column: 2 / span 1;
-  grid-row: 1;
-}
+  #Desktop-Space, #Desktop-Captial {
+    grid-row:5;   
+  }
 
-#E, #Three {
-  grid-column: 3 / span 1;
-  grid-row: 1;
-}
+  #Desktop-Space {
+    grid-column: 3 / span 6;
+  }
 
-#R, #Four {
-  grid-column: 4 / span 1;
-  grid-row: 1;
-}
+  button {
+    padding: 20px;
+    border-radius:10px;
+  }
 
-#T, #Five {
-  grid-column: 5 / span 1;
-  grid-row: 1;
-}
+  @media (min-width: 900px) { 
+    #Desktop-keyboard {
+      padding: 20px;
+      gap: 20px;
+    }
+  }
 
-#Y, #Six {
-  grid-column: 6 / span 1;
-  grid-row: 1;
-}
-
-#U, #Seven {
-  grid-column: 7 / span 1;
-  grid-row: 1;
-}
-
-#I, #Eight {
-  grid-column: 8 / span 1;
-  grid-row: 1;
-}
-
-#O, #Nine {
-  grid-column: 9 / span 1;
-  grid-row: 1;
-}
-
-#P, #Zero {
-  grid-column: 10 / span 1;
-  grid-row: 1;
-}
-
-#A, #At {
-  grid-column: 1 / span 1;
-  grid-row: 2;
-}
-
-#S, #Hash {
-  grid-column: 2 / span 1;
-  grid-row: 2;
-}
-
-#D, #Dollar {
-  grid-column: 3 / span 1;
-  grid-row: 2;
-}
-
-#F, #Percent {
-  grid-column: 4 / span 1;
-  grid-row: 2;
-}
-
-#G, #Ampersand {
-  grid-column: 5 / span 1;
-  grid-row: 2;
-}
-
-#H, #Star {
-  grid-column: 6 / span 1;
-  grid-row: 2;
-}
-
-#J, #Minus {
-  grid-column: 7 / span 1;
-  grid-row: 2;
-}
-
-#K, #Plus {
-  grid-column: 8 / span 1;
-  grid-row: 2;
-}
-
-#L, #Left-bracket {
-  grid-column: 9 / span 1;
-  grid-row: 2;
-}
-
-#Right-bracket {
-  grid-column: 10 / span 1;
-  grid-row: 2;
-}
-
-#Capital, #Alt {
-  grid-column: 1 / span 1;
-  grid-row: 3;
-}
-
-#Z, #Exclamation {
-  grid-column: 2 / span 1;
-  grid-row: 3;
-}
-
-#X, #Double-quote {
-  grid-column: 3 / span 1;
-  grid-row: 3;
-}
-
-#C, #Single-quote {
-  grid-column: 4 / span 1;
-  grid-row: 3;
-}
-
-#V, #Colon {
-  grid-column: 5 / span 1;
-  grid-row: 3;
-}
-
-#B, #Semi-colon {
-  grid-column: 6 / span 1;
-  grid-row: 3;
-}
-
-#N, #Forward-slash {
-  grid-column: 7 / span 1;
-  grid-row: 3;
-}
-
-#M, #Question {
-  grid-column: 8 / span 1;
-  grid-row: 3;
-}
-
-#Delete-keyboard, #Delete-number {
-  grid-column: 9 / span 2;
-  grid-row: 3;
-}
-
-#Numbers-link, #Comma {
-  grid-column: 1 / span 1;
-  grid-row: 4;
-}
-
-#Space-keyboard {
-  grid-column: 2 / span 9;
-  grid-row: 4;
-}
-
-#Space-number {
-  grid-column: 2 / span 8;
-  grid-row: 4;
-}
-
-#Dot {
-  grid-column: 10 / span 1;
-  grid-row: 4;
 }

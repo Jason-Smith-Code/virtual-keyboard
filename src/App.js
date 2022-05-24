@@ -16,7 +16,7 @@ const iconSize = "lg";
           
         </textarea>
       </form>
-      <div id="keyboard-letters">
+      <div id="Mobile-keyboard-letters">
         <button id="Q">Q</button>
         <button id="W">W</button>
         <button id="E">E</button>
@@ -48,7 +48,7 @@ const iconSize = "lg";
         <button id="Numbers-link">123</button>
         <button id="Space-keyboard">Space</button>
       </div>
-      <div id="keyboard-numbers">
+      <div id="Mobile-keyboard-numbers">
         <button id="One">1</button>
         <button id="Two">2</button>
         <button id="Three">3</button>
@@ -82,6 +82,57 @@ const iconSize = "lg";
         <button id="Comma">,</button>
         <button id="Space-number">SPACE</button>
         <button id="Dot">.</button>
+      </div>
+
+      <div id="Desktop-keyboard">
+        {/* ADD SYMBOLS ASWELL! */}
+        <button id="Desktop-One">1</button>
+        <button id="Desktop-Two">2</button>
+        <button id="Desktop-Three">3</button>
+        <button id="Desktop-Four">4</button>
+        <button id="Desktop-Five">5</button>
+        <button id="Desktop-Six">6</button>
+        <button id="Desktop-Seven">7</button>
+        <button id="Desktop-Eight">8</button>
+        <button id="Desktop-Nine">9</button>
+        <button id="Desktop-Zero">0</button>
+        <button id="Desktop-Minus">-</button>
+        <button id="Desktop-Plus">+</button>
+        <button id="Desktop-Delete"><FontAwesomeIcon className="icon" size={iconSize} icon={faDeleteLeft}/></button>
+        <button id="Desktop-Q">Q</button>
+        <button id="Desktop-W">W</button>
+        <button id="Desktop-E">E</button>
+        <button id="Desktop-R">R</button>
+        <button id="Desktop-T">T</button>
+        <button id="Desktop-Y">Y</button>
+        <button id="Desktop-U">U</button>
+        <button id="Desktop-I">I</button>
+        <button id="Desktop-O">O</button>
+        <button id="Desktop-P">P</button>
+        <button id="Desktop-A">A</button>
+        <button id="Desktop-S">S</button>
+        <button id="Desktop-D">D</button>
+        <button id="Desktop-F">F</button>
+        <button id="Desktop-G">G</button>
+        <button id="Desktop-H">H</button>
+        <button id="Desktop-J">J</button>
+        <button id="Desktop-K">K</button>
+        <button id="Desktop-L">L</button>
+        <button id="Desktop-Semi-colon">;</button>
+        <button id="Desktop-Single-quote">'</button>
+        <button id="Desktop-Hash">#</button>
+        <button id="Desktop-Captial"><FontAwesomeIcon className="icon" size={iconSize} icon={faAngleUp} /></button>
+        <button id="Desktop-Z">Z</button>
+        <button id="Desktop-X">X</button>
+        <button id="Desktop-C">C</button>
+        <button id="Desktop-V">V</button>
+        <button id="Desktop-B">B</button>
+        <button id="Desktop-N">N</button>
+        <button id="Desktop-M">M</button>
+        <button id="Desktop-Comma">,</button>
+        <button id="Desktop-Dot">.</button>
+        <button id="Desktop-Back-slash">/</button>
+        <button id="Desktop-Space">Space</button>
       </div>
     </div>
   );
