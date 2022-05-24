@@ -1,1 +1,207 @@
+:root {
+  --main-background: #202020;
+  --main-color: cyan;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-background);
+  color: var(--main-color);
+}
+
+button {
+  color: var(--main-color);
+  background-color: var(--main-background);
+  border: 1px solid var(--main-color);
+  padding: 5px;
+  border-radius:5px;
+}
+
+.icon {
+  color:  var(--main-color);
+}
+
+textarea {
+  width: 100%;
+  padding: 20px;
+}
+
+#keyboard-letters, #keyboard-numbers {
+  width: 100vw;
+  padding: 10px;
+  display: grid;
+  gap: 3px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns:  repeat(10, 1fr);
+}
+
+
+#Q, #One {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+}
+
+#W, #Two {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+}
+
+#E, #Three {
+  grid-column: 3 / span 1;
+  grid-row: 1;
+}
+
+#R, #Four {
+  grid-column: 4 / span 1;
+  grid-row: 1;
+}
+
+#T, #Five {
+  grid-column: 5 / span 1;
+  grid-row: 1;
+}
+
+#Y, #Six {
+  grid-column: 6 / span 1;
+  grid-row: 1;
+}
+
+#U, #Seven {
+  grid-column: 7 / span 1;
+  grid-row: 1;
+}
+
+#I, #Eight {
+  grid-column: 8 / span 1;
+  grid-row: 1;
+}
+
+#O, #Nine {
+  grid-column: 9 / span 1;
+  grid-row: 1;
+}
+
+#P, #Zero {
+  grid-column: 10 / span 1;
+  grid-row: 1;
+}
+
+#A, #At {
+  grid-column: 1 / span 1;
+  grid-row: 2;
+}
+
+#S, #Hash {
+  grid-column: 2 / span 1;
+  grid-row: 2;
+}
+
+#D, #Dollar {
+  grid-column: 3 / span 1;
+  grid-row: 2;
+}
+
+#F, #Percent {
+  grid-column: 4 / span 1;
+  grid-row: 2;
+}
+
+#G, #Ampersand {
+  grid-column: 5 / span 1;
+  grid-row: 2;
+}
+
+#H, #Star {
+  grid-column: 6 / span 1;
+  grid-row: 2;
+}
+
+#J, #Minus {
+  grid-column: 7 / span 1;
+  grid-row: 2;
+}
+
+#K, #Plus {
+  grid-column: 8 / span 1;
+  grid-row: 2;
+}
+
+#L, #Left-bracket {
+  grid-column: 9 / span 1;
+  grid-row: 2;
+}
+
+#Right-bracket {
+  grid-column: 10 / span 1;
+  grid-row: 2;
+}
+
+#Capital, #Alt {
+  grid-column: 1 / span 1;
+  grid-row: 3;
+}
+
+#Z, #Exclamation {
+  grid-column: 2 / span 1;
+  grid-row: 3;
+}
+
+#X, #Double-quote {
+  grid-column: 3 / span 1;
+  grid-row: 3;
+}
+
+#C, #Single-quote {
+  grid-column: 4 / span 1;
+  grid-row: 3;
+}
+
+#V, #Colon {
+  grid-column: 5 / span 1;
+  grid-row: 3;
+}
+
+#B, #Semi-colon {
+  grid-column: 6 / span 1;
+  grid-row: 3;
+}
+
+#N, #Forward-slash {
+  grid-column: 7 / span 1;
+  grid-row: 3;
+}
+
+#M, #Question {
+  grid-column: 8 / span 1;
+  grid-row: 3;
+}
+
+#Delete-keyboard, #Delete-number {
+  grid-column: 9 / span 2;
+  grid-row: 3;
+}
+
+#Numbers-link, #Comma {
+  grid-column: 1 / span 1;
+  grid-row: 4;
+}
+
+#Space-keyboard {
+  grid-column: 2 / span 9;
+  grid-row: 4;
+}
+
+#Space-number {
+  grid-column: 2 / span 8;
+  grid-row: 4;
+}
+
+#Dot {
+  grid-column: 10 / span 1;
+  grid-row: 4;
+}
