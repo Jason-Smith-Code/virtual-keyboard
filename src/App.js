@@ -86,53 +86,53 @@ const iconSize = "lg";
 
       <div id="Desktop-keyboard">
         {/* ADD SYMBOLS ASWELL! */}
-        <button id="Desktop-One">1</button>
-        <button id="Desktop-Two">2</button>
-        <button id="Desktop-Three">3</button>
-        <button id="Desktop-Four">4</button>
-        <button id="Desktop-Five">5</button>
-        <button id="Desktop-Six">6</button>
-        <button id="Desktop-Seven">7</button>
-        <button id="Desktop-Eight">8</button>
-        <button id="Desktop-Nine">9</button>
-        <button id="Desktop-Zero">0</button>
-        <button id="Desktop-Minus">-</button>
-        <button id="Desktop-Plus">+</button>
-        <button id="Desktop-Delete"><FontAwesomeIcon className="icon" size={iconSize} icon={faDeleteLeft}/></button>
-        <button id="Desktop-Q">Q</button>
-        <button id="Desktop-W">W</button>
-        <button id="Desktop-E">E</button>
-        <button id="Desktop-R">R</button>
-        <button id="Desktop-T">T</button>
-        <button id="Desktop-Y">Y</button>
-        <button id="Desktop-U">U</button>
-        <button id="Desktop-I">I</button>
-        <button id="Desktop-O">O</button>
-        <button id="Desktop-P">P</button>
-        <button id="Desktop-A">A</button>
-        <button id="Desktop-S">S</button>
-        <button id="Desktop-D">D</button>
-        <button id="Desktop-F">F</button>
-        <button id="Desktop-G">G</button>
-        <button id="Desktop-H">H</button>
-        <button id="Desktop-J">J</button>
-        <button id="Desktop-K">K</button>
-        <button id="Desktop-L">L</button>
-        <button id="Desktop-Semi-colon">;</button>
-        <button id="Desktop-Single-quote">'</button>
-        <button id="Desktop-Hash">#</button>
-        <button id="Desktop-Captial"><FontAwesomeIcon className="icon" size={iconSize} icon={faAngleUp} /></button>
-        <button id="Desktop-Z">Z</button>
-        <button id="Desktop-X">X</button>
-        <button id="Desktop-C">C</button>
-        <button id="Desktop-V">V</button>
-        <button id="Desktop-B">B</button>
-        <button id="Desktop-N">N</button>
-        <button id="Desktop-M">M</button>
-        <button id="Desktop-Comma">,</button>
-        <button id="Desktop-Dot">.</button>
-        <button id="Desktop-Back-slash">/</button>
-        <button id="Desktop-Space">Space</button>
+        <div className="grid-item" id="Desktop-One">    <button className="hoverable">1</button></div>
+        <div className="grid-item" id="Desktop-Two">    <button className="hoverable">2</button></div>
+        <div className="grid-item" id="Desktop-Three">  <button className="hoverable">3</button></div>
+        <div className="grid-item" id="Desktop-Four">   <button className="hoverable">4</button></div>
+        <div className="grid-item" id="Desktop-Five">   <button className="hoverable">5</button></div>
+        <div className="grid-item" id="Desktop-Six">    <button className="hoverable">6</button></div>
+        <div className="grid-item" id="Desktop-Seven">  <button className="hoverable">7</button></div>
+        <div className="grid-item" id="Desktop-Eight">  <button className="hoverable">8</button></div>
+        <div className="grid-item" id="Desktop-Nine">   <button className="hoverable">9</button></div>
+        <div className="grid-item" id="Desktop-Zero">   <button className="hoverable" >0</button></div>
+        <div className="grid-item" id="Desktop-Minus">  <button className="hoverable">-</button></div>
+        <div className="grid-item" id="Desktop-Plus">   <button className="hoverable">+</button></div>
+        <div className="grid-item" id="Desktop-Delete"> <button className="hoverable"><FontAwesomeIcon className="icon" size={iconSize} icon={faDeleteLeft}/></button></div>
+        <div className="grid-item" id="Desktop-Q">      <button className="hoverable">Q</button></div>
+        <div className="grid-item" id="Desktop-W">      <button className="hoverable">W</button></div>
+        <div className="grid-item" id="Desktop-E">      <button className="hoverable">E</button></div>
+        <div className="grid-item" id="Desktop-R">      <button className="hoverable">R</button></div>
+        <div className="grid-item" id="Desktop-T">      <button className="hoverable">T</button></div>
+        <div className="grid-item" id="Desktop-Y">      <button className="hoverable">Y</button></div>
+        <div className="grid-item" id="Desktop-U">      <button className="hoverable">U</button></div>
+        <div className="grid-item" id="Desktop-I">      <button className="hoverable">I</button></div>
+        <div className="grid-item" id="Desktop-O">      <button className="hoverable">O</button></div>
+        <div className="grid-item" id="Desktop-P">      <button className="hoverable">P</button></div>
+        <div className="grid-item" id="Desktop-A">      <button className="hoverable">A</button></div>
+        <div className="grid-item" id="Desktop-S">      <button className="hoverable">S</button></div>
+        <div className="grid-item" id="Desktop-D">      <button className="hoverable">D</button></div>
+        <div className="grid-item" id="Desktop-F">      <button className="hoverable">F</button></div>
+        <div className="grid-item" id="Desktop-G">      <button className="hoverable">G</button></div>
+        <div className="grid-item" id="Desktop-H">      <button className="hoverable">H</button></div>
+        <div className="grid-item" id="Desktop-J">      <button className="hoverable">J</button></div>
+        <div className="grid-item" id="Desktop-K">      <button className="hoverable">K</button></div>
+        <div className="grid-item" id="Desktop-L">      <button className="hoverable">L</button></div>
+        <div className="grid-item" id="Desktop-Semi-colon"><button className="hoverable">;</button></div>
+        <div className="grid-item" id="Desktop-Single-quote"><button className="hoverable">'</button></div>
+        <div className="grid-item" id="Desktop-Hash">   <button  className="hoverable">#</button></div>
+        <div className="grid-item" id="Desktop-Z">      <button  className="hoverable">Z</button></div>
+        <div className="grid-item" id="Desktop-X">      <button  className="hoverable">X</button></div>
+        <div className="grid-item" id="Desktop-C">      <button className="hoverable">C</button></div>
+        <div className="grid-item" id="Desktop-V">      <button className="hoverable">V</button></div>
+        <div className="grid-item" id="Desktop-B">      <button className="hoverable">B</button></div>
+        <div className="grid-item" id="Desktop-N">      <button className="hoverable">N</button></div>
+        <div className="grid-item" id="Desktop-M">      <button  className="hoverable">M</button></div>
+        <div className="grid-item" id="Desktop-Comma">  <button className="hoverable">,</button></div>
+        <div className="grid-item" id="Desktop-Dot">    <button className="hoverable">.</button></div>
+        <div className="grid-item" id="Desktop-Back-slash"><button className="hoverable">/</button></div>
+        <div className="grid-item" id="Desktop-Captial"><button  className="hoverable"><FontAwesomeIcon className="icon" size={iconSize} icon={faAngleUp} /></button></div>
+        <div className="grid-item" id="Desktop-Space">  <button className="hoverable">Space</button></div>
       </div>
     </div>
   );
