@@ -250,14 +250,18 @@
   .hoverable {
     position: absolute;
     top: 0;
-    transition: 250ms;
+    transition: 50ms;
     width: 100%;
     height: 100%;
     box-shadow: black 0px 6px 0px 0px;
   }
 
-  .hoverable:hover {
+  .pressed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     color: white;
+    transition: 50ms;
     top:6px;
     box-shadow: black 0px 0px 0px 0px;
   }
