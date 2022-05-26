@@ -6,7 +6,8 @@ import {
   faDeleteLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
-// replace the long words with icons
+import { MobileNumbers } from "./MobileKeyboardNumbers";
+import { MobileLetters } from "./MobileLetters";
 
 function App() {
   const iconSize = "lg";
@@ -15,20 +16,22 @@ function App() {
   const [numbers, setNumbers] = useState("false");
 
   const addCharacter = (e) => {
-    // push the value of the button pressed, to the text area
+    // push the value of the button pressed, to the text state
     setText(text + e.target.value);
   };
 
   const removeCharacter = () => {
-    // push the value of the button pressed, to the text area
+    // remove the value of the button pressed, from the text state
     setText(text.slice(0, -1));
   };
 
   const capitalize = () => {
+    // toggle capital state
     setCapital(!capital);
   };
 
   const alternateMobileKeys = () => {
+    // toggle number state
     setNumbers(!numbers);
   };
 
@@ -42,327 +45,120 @@ function App() {
         event.target.classList.remove("pressed");
         event.target.classList.add("hoverable");
       }, 250);
-    }
+    } else return;
   });
 
+  function createMobileKeyboardNumbers() {
+    return MobileNumbers.map((character) => {
+      // deal with the strings, convert them to the correct functions
+      if (character.click === "addCharacter") {
+        return (
+          <button
+            key={character.id}
+            value={character.value}
+            id={character.id}
+            onClick={addCharacter}
+          >
+            {character.text}
+          </button>
+        );
+      } else if (character.click === "removeCharacter") {
+        return (
+          <button
+            key={character.id}
+            value={character.value}
+            id={character.id}
+            onClick={removeCharacter}
+          >
+            {character.text}
+          </button>
+        );
+      } else if (character.click === "alternateMobileKeys") {
+        return (
+          <button
+            key={character.id}
+            value={character.value}
+            id={character.id}
+            onClick={alternateMobileKeys}
+          >
+            {character.text}
+          </button>
+        );
+      } else return null;
+    });
+  }
+
+  // Add the numbers to the letters array, see if I can work it from a single array.
+
+  function createMobileNumbers() {
+    return MobileLetters.map((character) => {
+      return (
+        <button
+          key={character.id}
+          value={capital ? character.upperValue : character.lowerValue}
+          id={character.id}
+          onClick={
+            character.click === "addCharacter"
+              ? addCharacter
+              : character.click === "removeCharacter"
+              ? removeCharacter
+              : character.click === "alternateMobileKeys"
+              ? alternateMobileKeys
+              : character.click === "capitalize"
+              ? capitalize
+              : ""
+          }
+        >
+          {character.text
+            ? character.text
+            : capital
+            ? character.UpperRender
+            : character.lowerRender}
+        </button>
+      );
+    });
+  }
+
+  function createMobileLetters() {
+    return MobileLetters.map((character) => {
+      return (
+        <button
+          key={character.id}
+          value={capital ? character.upperValue : character.lowerValue}
+          id={character.id}
+          onClick={
+            character.click === "addCharacter"
+              ? addCharacter
+              : character.click === "removeCharacter"
+              ? removeCharacter
+              : character.click === "alternateMobileKeys"
+              ? alternateMobileKeys
+              : character.click === "capitalize"
+              ? capitalize
+              : ""
+          }
+        >
+          {character.text
+            ? character.text
+            : capital
+            ? character.UpperRender
+            : character.lowerRender}
+        </button>
+      );
+    });
+  }
   return (
     <div id="App">
       <form>
         <textarea autoFocus value={text}></textarea>
       </form>
       {!numbers ? (
-        <div id="Mobile-keyboard-numbers">
-          <button onClick={addCharacter} value="1" id="One">
-            1
-          </button>
-          <button onClick={addCharacter} value="2" id="Two">
-            2
-          </button>
-          <button onClick={addCharacter} value="3" id="Three">
-            3
-          </button>
-          <button onClick={addCharacter} value="4" id="Four">
-            4
-          </button>
-          <button onClick={addCharacter} value="5" id="Five">
-            5
-          </button>
-          <button onClick={addCharacter} value="6" id="Six">
-            6
-          </button>
-          <button onClick={addCharacter} value="7" id="Seven">
-            7
-          </button>
-          <button onClick={addCharacter} value="8" id="Eight">
-            8
-          </button>
-          <button onClick={addCharacter} value="9" id="Nine">
-            9
-          </button>
-          <button onClick={addCharacter} value="0" id="Zero">
-            0
-          </button>
-          <button onClick={addCharacter} value="@" id="At">
-            @
-          </button>
-          <button onClick={addCharacter} value="#" id="Hash">
-            #
-          </button>
-          <button onClick={addCharacter} value="$" id="Dollar">
-            $
-          </button>
-          <button onClick={addCharacter} value="%" id="Percent">
-            %
-          </button>
-          <button onClick={addCharacter} value="&amp;" id="Ampersand">
-            &amp;
-          </button>
-          <button onClick={addCharacter} value="*" id="Star">
-            *
-          </button>
-          <button onClick={addCharacter} value="-" id="Minus">
-            -
-          </button>
-          <button onClick={addCharacter} value="+" id="Plus">
-            +
-          </button>
-          <button onClick={addCharacter} value="(" id="Left-bracket">
-            (
-          </button>
-          <button onClick={addCharacter} value=")" id="Right-bracket">
-            )
-          </button>
-          <button onClick={alternateMobileKeys} id="Alt">
-            abc
-          </button>
-          <button onClick={addCharacter} value="!" id="Exclamation">
-            !
-          </button>
-          <button onClick={addCharacter} value='"' id="Double-quote">
-            "
-          </button>
-          <button onClick={addCharacter} value="'" id="Single-quote">
-            '
-          </button>
-          <button onClick={addCharacter} value=":" id="Colon">
-            :
-          </button>
-          <button onClick={addCharacter} value=";" id="Semi-colon">
-            ;
-          </button>
-          <button onClick={addCharacter} value="/" id="Forward-slash">
-            /
-          </button>
-          <button onClick={addCharacter} value="?" id="Question">
-            ?
-          </button>
-          <button onClick={removeCharacter} id="Delete-number">
-            <FontAwesomeIcon
-              className="icon"
-              size={iconSize}
-              icon={faDeleteLeft}
-            />
-          </button>
-          <button onClick={addCharacter} value="," id="Comma">
-            ,
-          </button>
-          <button onClick={addCharacter} value=" " id="Space-number">
-            SPACE
-          </button>
-          <button onClick={addCharacter} value="." id="Dot">
-            .
-          </button>
-        </div>
+        <div id="Mobile-keyboard-numbers">{createMobileKeyboardNumbers()}</div>
       ) : (
-        <div id="Mobile-keyboard-letters">
-          {capital ? (
-            <>
-              <button onClick={addCharacter} value="Q" id="Q">
-                Q
-              </button>
-              <button onClick={addCharacter} value="W" id="W">
-                W
-              </button>
-              <button onClick={addCharacter} value="E" id="E">
-                E
-              </button>
-              <button onClick={addCharacter} value="R" id="R">
-                R
-              </button>
-              <button onClick={addCharacter} value="T" id="T">
-                T
-              </button>
-              <button onClick={addCharacter} value="Y" id="Y">
-                Y
-              </button>
-              <button onClick={addCharacter} value="U" id="U">
-                U
-              </button>
-              <button onClick={addCharacter} value="I" id="I">
-                I
-              </button>
-              <button onClick={addCharacter} value="O" id="O">
-                O
-              </button>
-              <button onClick={addCharacter} value="P" id="P">
-                P
-              </button>
-              <button onClick={addCharacter} value="A" id="A">
-                A
-              </button>
-              <button onClick={addCharacter} value="S" id="S">
-                S
-              </button>
-              <button onClick={addCharacter} value="D" id="D">
-                D
-              </button>
-              <button onClick={addCharacter} value="F" id="F">
-                F
-              </button>
-              <button onClick={addCharacter} value="G" id="G">
-                G
-              </button>
-              <button onClick={addCharacter} value="H" id="H">
-                H
-              </button>
-              <button onClick={addCharacter} value="J" id="J">
-                J
-              </button>
-              <button onClick={addCharacter} value="K" id="K">
-                K
-              </button>
-              <button onClick={addCharacter} value="L" id="L">
-                L
-              </button>
-              <button onClick={capitalize} id="Capital">
-                <FontAwesomeIcon
-                  className="icon"
-                  size={iconSize}
-                  icon={faAngleDown}
-                />
-              </button>
-              <button onClick={addCharacter} value="Z" id="Z">
-                Z
-              </button>
-              <button onClick={addCharacter} value="X" id="X">
-                X
-              </button>
-              <button onClick={addCharacter} value="C" id="C">
-                C
-              </button>
-              <button onClick={addCharacter} value="V" id="V">
-                V
-              </button>
-              <button onClick={addCharacter} value="B" id="B">
-                B
-              </button>
-              <button onClick={addCharacter} value="N" id="N">
-                N
-              </button>
-              <button onClick={addCharacter} value="M" id="M">
-                M
-              </button>
-              <button onClick={removeCharacter} id="Delete-keyboard">
-                <FontAwesomeIcon
-                  className="icon"
-                  size={iconSize}
-                  icon={faDeleteLeft}
-                />
-              </button>
-              <button onClick={alternateMobileKeys} id="Numbers-link">
-                123
-              </button>
-              <button onClick={addCharacter} value=" " id="Space-keyboard">
-                Space
-              </button>
-            </>
-          ) : (
-            <>
-              <button onClick={addCharacter} value="q" id="Q">
-                q
-              </button>
-              <button onClick={addCharacter} value="w" id="W">
-                w
-              </button>
-              <button onClick={addCharacter} value="e" id="E">
-                e
-              </button>
-              <button onClick={addCharacter} value="r" id="R">
-                r
-              </button>
-              <button onClick={addCharacter} value="t" id="T">
-                t
-              </button>
-              <button onClick={addCharacter} value="y" id="Y">
-                y
-              </button>
-              <button onClick={addCharacter} value="u" id="U">
-                u
-              </button>
-              <button onClick={addCharacter} value="i" id="I">
-                i
-              </button>
-              <button onClick={addCharacter} value="o" id="O">
-                o
-              </button>
-              <button onClick={addCharacter} value="p" id="P">
-                p
-              </button>
-              <button onClick={addCharacter} value="a" id="A">
-                a
-              </button>
-              <button onClick={addCharacter} value="s" id="S">
-                s
-              </button>
-              <button onClick={addCharacter} value="d" id="D">
-                d
-              </button>
-              <button onClick={addCharacter} value="f" id="F">
-                f
-              </button>
-              <button onClick={addCharacter} value="g" id="G">
-                g
-              </button>
-              <button onClick={addCharacter} value="h" id="H">
-                h
-              </button>
-              <button onClick={addCharacter} value="j" id="J">
-                j
-              </button>
-              <button onClick={addCharacter} value="k" id="K">
-                k
-              </button>
-              <button onClick={addCharacter} value="l" id="L">
-                l
-              </button>
-              <button onClick={capitalize} id="Capital">
-                <FontAwesomeIcon
-                  className="icon"
-                  size={iconSize}
-                  icon={faAngleUp}
-                />
-              </button>
-              <button onClick={addCharacter} value="z" id="Z">
-                z
-              </button>
-              <button onClick={addCharacter} value="x" id="X">
-                x
-              </button>
-              <button onClick={addCharacter} value="c" id="C">
-                c
-              </button>
-              <button onClick={addCharacter} value="v" id="V">
-                v
-              </button>
-              <button onClick={addCharacter} value="b" id="B">
-                b
-              </button>
-              <button onClick={addCharacter} value="n" id="N">
-                n
-              </button>
-              <button onClick={addCharacter} value="m" id="M">
-                m
-              </button>
-              <button onClick={removeCharacter} id="Delete-keyboard">
-                <FontAwesomeIcon
-                  className="icon"
-                  size={iconSize}
-                  icon={faDeleteLeft}
-                />
-              </button>
-              <button onClick={alternateMobileKeys} id="Numbers-link">
-                123
-              </button>
-              <button onClick={addCharacter} value=" " id="Space-keyboard">
-                Space
-              </button>
-            </>
-          )}
-        </div>
+        <div id="Mobile-keyboard-letters">{createMobileLetters()}</div>
       )}
 
       <div id="Desktop-keyboard">
-        {/* ADD SYMBOLS ASWELL! */}
         {capital ? (
           <>
             <div className="grid-item" id="Desktop-One">

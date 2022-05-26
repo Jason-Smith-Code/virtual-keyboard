@@ -6,7 +6,6 @@ import {
   faDeleteLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
-// replace the long words with icons
 
 function App() {
   const iconSize = "lg";
@@ -20,7 +19,7 @@ function App() {
   };
 
   const removeCharacter = () => {
-    // push the value of the button pressed, to the text area
+    // remove the last character in the text string
     setText(text.slice(0, -1));
   };
 
@@ -362,7 +361,6 @@ function App() {
       )}
 
       <div id="Desktop-keyboard">
-        {/* ADD SYMBOLS ASWELL! */}
         {capital ? (
           <>
             <div className="grid-item" id="Desktop-One">
