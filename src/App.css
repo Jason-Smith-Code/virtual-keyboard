@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 0px) {
 
   body {
