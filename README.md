@@ -63,8 +63,4 @@ Mobile
 
 ## Viewing the application
 
-## Project status
-
-## Bonus Objectives
-
-**Version 1.1.0**
+[View here](https://jason-smith-code.github.io/virtual-keyboard/)
