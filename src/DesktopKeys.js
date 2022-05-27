@@ -8,9 +8,105 @@ const iconSize = "lg";
 
 // explore usng toLowerCase()
 
-export let MobileLetters = [
+export let DesktopKeys = [
   {
-    id: "Q",
+    id: "Desktop-One",
+    click: "addCharacter",
+    lowerValue: "1",
+    lowerRender: "1",
+    upperValue: "!",
+    UpperRender: "!",
+  },
+  {
+    id: "Desktop-Two",
+    click: "addCharacter",
+    lowerValue: "2",
+    lowerRender: "2",
+    upperValue: '"',
+    UpperRender: '"',
+  },
+  {
+    id: "Desktop-Three",
+    click: "addCharacter",
+    lowerValue: "3",
+    lowerRender: "3",
+    upperValue: "£",
+    UpperRender: "£",
+  },
+  {
+    id: "Desktop-Four",
+    click: "addCharacter",
+    lowerValue: "4",
+    lowerRender: "4",
+    upperValue: "$",
+    UpperRender: "$",
+  },
+  {
+    id: "Desktop-Five",
+    click: "addCharacter",
+    lowerValue: "5",
+    lowerRender: "5",
+    upperValue: "%",
+    UpperRender: "%",
+  },
+  {
+    id: "Desktop-Six",
+    click: "addCharacter",
+    lowerValue: "6",
+    lowerRender: "6",
+    upperValue: "^",
+    UpperRender: "^",
+  },
+  {
+    id: "Desktop-Seven",
+    click: "addCharacter",
+    lowerValue: "7",
+    lowerRender: "7",
+    upperValue: "&",
+    UpperRender: "&",
+  },
+  {
+    id: "Desktop-Eight",
+    click: "addCharacter",
+    lowerValue: "8",
+    lowerRender: "8",
+    upperValue: "*",
+    UpperRender: "*",
+  },
+  {
+    id: "Desktop-Nine",
+    click: "addCharacter",
+    lowerValue: "9",
+    lowerRender: "9",
+    upperValue: "(",
+    UpperRender: "(",
+  },
+  {
+    id: "Desktop-Zero",
+    click: "addCharacter",
+    lowerValue: "0",
+    lowerRender: "0",
+    upperValue: ")",
+    UpperRender: ")",
+  },
+  {
+    id: "Desktop-Minus",
+    click: "addCharacter",
+    lowerValue: "-",
+    lowerRender: "-",
+    upperValue: "_",
+    UpperRender: "_",
+  },
+  {
+    id: "Desktop-Plus",
+    click: "addCharacter",
+    lowerValue: "=",
+    lowerRender: "=",
+    upperValue: "+",
+    UpperRender: "+",
+  },
+  {
+    id: "Desktop-Q",
     click: "addCharacter",
     lowerValue: "q",
     lowerRender: "q",
@@ -18,7 +114,7 @@ export let MobileLetters = [
     UpperRender: "Q",
   },
   {
-    id: "W",
+    id: "Desktop-W",
     click: "addCharacter",
     lowerValue: "w",
     lowerRender: "w",
@@ -26,7 +122,7 @@ export let MobileLetters = [
     UpperRender: "W",
   },
   {
-    id: "E",
+    id: "Desktop-E",
     click: "addCharacter",
     lowerValue: "e",
     lowerRender: "e",
@@ -34,7 +130,7 @@ export let MobileLetters = [
     UpperRender: "E",
   },
   {
-    id: "R",
+    id: "Desktop-R",
     click: "addCharacter",
     lowerValue: "r",
     lowerRender: "r",
@@ -42,7 +138,7 @@ export let MobileLetters = [
     UpperRender: "R",
   },
   {
-    id: "T",
+    id: "Desktop-T",
     click: "addCharacter",
     lowerValue: "t",
     lowerRender: "t",
@@ -50,7 +146,7 @@ export let MobileLetters = [
     UpperRender: "T",
   },
   {
-    id: "Y",
+    id: "Desktop-Y",
     click: "addCharacter",
     lowerValue: "y",
     lowerRender: "y",
@@ -58,7 +154,7 @@ export let MobileLetters = [
     UpperRender: "Y",
   },
   {
-    id: "U",
+    id: "Desktop-U",
     click: "addCharacter",
     lowerValue: "u",
     lowerRender: "u",
@@ -66,7 +162,7 @@ export let MobileLetters = [
     UpperRender: "U",
   },
   {
-    id: "I",
+    id: "Desktop-I",
     click: "addCharacter",
     lowerValue: "i",
     lowerRender: "i",
@@ -74,7 +170,7 @@ export let MobileLetters = [
     UpperRender: "I",
   },
   {
-    id: "O",
+    id: "Desktop-O",
     click: "addCharacter",
     lowerValue: "o",
     lowerRender: "o",
@@ -82,7 +178,7 @@ export let MobileLetters = [
     UpperRender: "O",
   },
   {
-    id: "P",
+    id: "Desktop-P",
     click: "addCharacter",
     lowerValue: "p",
     lowerRender: "p",
@@ -90,7 +186,7 @@ export let MobileLetters = [
     UpperRender: "P",
   },
   {
-    id: "A",
+    id: "Desktop-A",
     click: "addCharacter",
     lowerValue: "a",
     lowerRender: "a",
@@ -98,7 +194,7 @@ export let MobileLetters = [
     UpperRender: "A",
   },
   {
-    id: "S",
+    id: "Desktop-S",
     click: "addCharacter",
     lowerValue: "s",
     lowerRender: "s",
@@ -106,7 +202,7 @@ export let MobileLetters = [
     UpperRender: "S",
   },
   {
-    id: "D",
+    id: "Desktop-D",
     click: "addCharacter",
     lowerValue: "d",
     lowerRender: "d",
@@ -114,7 +210,7 @@ export let MobileLetters = [
     UpperRender: "D",
   },
   {
-    id: "F",
+    id: "Desktop-F",
     click: "addCharacter",
     lowerValue: "f",
     lowerRender: "f",
@@ -122,7 +218,7 @@ export let MobileLetters = [
     UpperRender: "F",
   },
   {
-    id: "G",
+    id: "Desktop-G",
     click: "addCharacter",
     lowerValue: "g",
     lowerRender: "g",
@@ -130,7 +226,7 @@ export let MobileLetters = [
     UpperRender: "G",
   },
   {
-    id: "H",
+    id: "Desktop-H",
     click: "addCharacter",
     lowerValue: "h",
     lowerRender: "h",
@@ -138,7 +234,7 @@ export let MobileLetters = [
     UpperRender: "H",
   },
   {
-    id: "J",
+    id: "Desktop-J",
     click: "addCharacter",
     lowerValue: "j",
     lowerRender: "j",
@@ -146,7 +242,7 @@ export let MobileLetters = [
     UpperRender: "J",
   },
   {
-    id: "K",
+    id: "Desktop-K",
     click: "addCharacter",
     lowerValue: "k",
     lowerRender: "k",
@@ -154,7 +250,7 @@ export let MobileLetters = [
     UpperRender: "K",
   },
   {
-    id: "L",
+    id: "Desktop-L",
     click: "addCharacter",
     lowerValue: "l",
     lowerRender: "l",
@@ -162,7 +258,31 @@ export let MobileLetters = [
     UpperRender: "L",
   },
   {
-    id: "Capital",
+    id: "Desktop-Semi-colon",
+    click: "addCharacter",
+    lowerValue: ";",
+    lowerRender: ";",
+    upperValue: ":",
+    UpperRender: ":",
+  },
+  {
+    id: "Desktop-Single-quote",
+    click: "addCharacter",
+    lowerValue: "'",
+    lowerRender: "'",
+    upperValue: "@",
+    UpperRender: "@",
+  },
+  {
+    id: "Desktop-Hash",
+    click: "addCharacter",
+    lowerValue: "#",
+    lowerRender: "#",
+    upperValue: "~",
+    UpperRender: "~ ",
+  },
+  {
+    id: "Desktop-Capital",
     click: "capitalize",
     lowerRender: (
       <FontAwesomeIcon className="icon" size={iconSize} icon={faAngleUp} />
@@ -172,7 +292,7 @@ export let MobileLetters = [
     ),
   },
   {
-    id: "Z",
+    id: "Desktop-Z",
     click: "addCharacter",
     lowerValue: "z",
     lowerRender: "z",
@@ -180,7 +300,7 @@ export let MobileLetters = [
     UpperRender: "Z",
   },
   {
-    id: "X",
+    id: "Desktop-X",
     click: "addCharacter",
     lowerValue: "x",
     lowerRender: "x",
@@ -188,7 +308,7 @@ export let MobileLetters = [
     UpperRender: "X",
   },
   {
-    id: "C",
+    id: "Desktop-C",
     click: "addCharacter",
     lowerValue: "c",
     lowerRender: "c",
@@ -196,7 +316,7 @@ export let MobileLetters = [
     UpperRender: "C",
   },
   {
-    id: "V",
+    id: "Desktop-V",
     click: "addCharacter",
     lowerValue: "v",
     lowerRender: "v",
@@ -204,7 +324,7 @@ export let MobileLetters = [
     UpperRender: "V",
   },
   {
-    id: "B",
+    id: "Desktop-B",
     click: "addCharacter",
     lowerValue: "b",
     lowerRender: "b",
@@ -212,7 +332,7 @@ export let MobileLetters = [
     UpperRender: "B",
   },
   {
-    id: "N",
+    id: "Desktop-N",
     click: "addCharacter",
     lowerValue: "n",
     lowerRender: "n",
@@ -220,7 +340,7 @@ export let MobileLetters = [
     UpperRender: "N",
   },
   {
-    id: "M",
+    id: "Desktop-M",
     click: "addCharacter",
     lowerValue: "m",
     lowerRender: "m",
@@ -228,19 +348,38 @@ export let MobileLetters = [
     UpperRender: "M",
   },
   {
-    id: "Delete-keyboard",
+    id: "Desktop-Comma",
+    click: "addCharacter",
+    lowerValue: ",",
+    lowerRender: ",",
+    upperValue: "<",
+    UpperRender: "<",
+  },
+  {
+    id: "Desktop-Dot",
+    click: "addCharacter",
+    lowerValue: ".",
+    lowerRender: ".",
+    upperValue: ">",
+    UpperRender: ">",
+  },
+  {
+    id: "Desktop-Back-slash",
+    click: "addCharacter",
+    lowerValue: "/",
+    lowerRender: "/",
+    upperValue: "?",
+    UpperRender: "?",
+  },
+  {
+    id: "Desktop-Delete",
     click: "removeCharacter",
     text: (
       <FontAwesomeIcon className="icon" size={iconSize} icon={faDeleteLeft} />
     ),
   },
   {
-    id: "Numbers-link",
-    click: "alternateMobileKeys",
-    text: "123",
-  },
-  {
-    id: "Space-keyboard",
+    id: "Desktop-Space",
     lowerValue: " ",
     upperValue: " ",
     click: "addCharacter",
