@@ -15,6 +15,11 @@ button:hover {
 
 @media (min-width: 0px) {
 
+  #top-text-container {
+    text-align: center;
+    padding: 10px 0;
+  }
+
   body {
     background-color: var(--main-background);
     color: var(--main-color);

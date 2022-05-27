@@ -122,6 +122,9 @@ function AppRefactored() {
 
   return (
     <div id="App">
+      <div id="top-text-container">
+        <p>Use the keyboard below to enter text into the text area</p>
+      </div>
       <form>
         <textarea autoFocus value={text} onChange={handleChange}></textarea>
       </form>
