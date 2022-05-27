@@ -1,8 +1,8 @@
 import "./App.css";
 import React, { useState } from "react";
-import { MobileNumbers } from "./MobileKeyboardNumbers";
-import { MobileLetters } from "./MobileLetters";
-import { DesktopKeys } from "./DesktopKeys";
+import { MobileNumbers } from "./characters/MobileKeyboardNumbers";
+import { MobileLetters } from "./characters/MobileLetters";
+import { DesktopKeys } from "./characters/DesktopKeys";
 
 function AppRefactored() {
   const [text, setText] = useState("");
